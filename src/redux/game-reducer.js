@@ -1,11 +1,13 @@
-import { Map } from 'immutable';
+import { Map, fromJS } from 'immutable';
+import { questions } from './functions';
 
 const initialGame = Map({
     startTime: null,
     gameMemo: '',
     gameSetupStarted: false,
     numOfTeams: 2,
-    teams: Map()
+    teams: Map(),
+    questions: fromJS(questions)
 });
 
 export default (gameState = initialGame, action) => {

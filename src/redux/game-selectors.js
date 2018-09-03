@@ -28,3 +28,8 @@ export const getStartTime = createSelector(
     getGameState,
     game => game.get('startTime')
 );
+
+export const getQuestions = createSelector(
+    getGameState,
+    game => game.get('questions')
+);
